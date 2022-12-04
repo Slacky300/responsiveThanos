@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+body{
+	background-color: grey;
+}
+
+.mainContainer{
+
+	max-width: 56.25rem;
+	margin: 0 auto;
+}
+
+.content{
+
+	max-width: 37.5rem;
+	padding: 1.25rem;
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 6.25rem;
+	box-shadow: 0.25rem 0.1rem 0.3rem rgba(1, 1, 1, 0.3);
+	border-radius: 0.3rem;
+
+	
+}
+
+.formCont{
+	display: grid;
+	margin-top: 1.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(12.5rem,1fr));
+	gap: 1.25rem;
+
+}
+
+.formVal{
+	display: flex;
+	flex-direction: column;
+}
+
+.formCont label{
+	font-size: 1rem;
+}
+
+.formCont input, select, textarea{
+	padding: 0.3rem 0.6rem;
+	border: 0.1rem solid black;
+	border-radius: 0.25rem;
+	font-size: 0.8rem;
+}
+
+.formCont input:focus{
+	outline-color: darkblue;
+}
+
+.butn{
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.butn button{
+	background-color: red;
+	border: transparent solid 0.1rem;
+	padding: 0.3rem 0.2rem;
+	color: white;
+	border-radius: 0.1rem;
+	width: 8rem;
+	transition: 0.3s ease-in;
+}
+
+.butn button:hover{
+	background-color: green;
+	color: white;
+	transition: 0.3s ease-out;
+}
+
