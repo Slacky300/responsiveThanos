@@ -128,3 +128,15 @@
 
 	
 }
+
+.btn{
+	text-align: center;
+}
+button{
+	width: 6em;
+	height: 2em;
+	color: white;
+	background-color: green;
+	font-size: 2em;
+	margin-top: 2em;
+}

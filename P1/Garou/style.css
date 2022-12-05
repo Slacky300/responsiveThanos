@@ -1,0 +1,171 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.mainContent{
+	max-width: 56.25em;
+	margin: 0 auto;
+	border: 0.1em solid purple;
+}
+
+.content{
+	max-width: 37.5em;
+	margin: 0 auto;
+	padding-bottom: 4em;
+
+}
+
+.img img{
+	width: 18.15em;
+	height: 17.5em;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.img,.info{
+	margin-top: 4em;
+}
+
+.topSection{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2em;
+	align-items: flex-end;
+}
+
+.middleSection{
+	margin-top: 4em;
+}
+
+.middleSection h2{
+	padding-bottom: 0.5em;
+}
+
+/*---------------------------------Collapsing details-----------------------------------*/
+.Form1,.Form2, .Form3{
+	margin-top: 1.5em;
+	border: 0.1em solid black;
+}
+
+
+.Form1 label,.Form2 label, .Form3 label{
+	background-color: purple;
+	color: white;
+	font-size: 1.5em;
+	display: block;
+	cursor: pointer;
+	padding: 0.6em 0.6em 0.6em 1.9em;
+	position: relative;
+	user-select: none;
+
+
+}
+
+label:before {
+	content: " ";
+	border-width: 0.6em;
+	border-style: solid;
+	border-color: transparent transparent transparent white;
+	position: absolute;
+	left: 0.8em;
+	height: 0;
+	top: 0.6em;
+	transition: transform 0.4s;
+	transform-origin: 1px center;
+}
+
+.monsterInfo img,.monsterInfo2 img, .monsterInfo3 img{
+	float: left;
+	max-width: 15.8em;
+	max-height: 12.5em;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 0.5em ;
+}
+
+
+#trigger,#trigger2,#trigger3{
+	display: none;
+}
+
+#trigger:checked ~ label:before,#trigger2:checked ~ label:before,#trigger3:checked ~ label:before{
+	transform: rotate(90deg);
+}
+
+.monsterInfo, .monsterInfo2, .monsterInfo3{
+
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+	padding: 0;
+}
+
+.monsterInfo h3, .monsterInfo2 h3, .monsterInfo3 h3{
+	padding: 0.2em 0.2em;
+}
+
+#trigger:checked ~ .monsterInfo, #trigger2:checked ~ .monsterInfo2, #trigger3:checked ~ .monsterInfo3{
+
+	opacity: 1;
+	height: auto;
+	padding: 0.8em 0.8em;
+}
+
+
+
+
+
+/*--------------------------------end of collapsing---------------------*/
+
+.middleSection{
+	margin-bottom: 2em;
+}
+
+.lastInfo h2{
+
+	padding-bottom: 0.5em;
+
+}
+
+@media (max-width: 650px){
+	.topSection{
+
+		flex-wrap: wrap;
+		gap: 20px;
+		align-items: center;
+		justify-content: center;
+		
+	}
+
+	.mainContent{
+		padding: 2em 2em;
+	}
+}
+
+@media (max-width: 550px){
+	
+	.monsterInfo,.monsterInfo2, .monsterInfo3{
+
+		display: flex;
+		flex-wrap: wrap;
+		gap: 3.5em;
+		align-items: center;
+		justify-content: center;
+
+		
+	}
+
+	.monsterInfo img,.monsterInfo2 img, .monsterInfo3 img{
+
+			margin-top: 2em;
+	}
+
+	.monsterInfo p, .monsterInfo2 p, .monsterInfo3 p{
+		margin-top: -2.4em;
+		font-size: 1.1em;
+	}
+
+	
+}
