@@ -1,0 +1,121 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: montserrat;
+}
+
+
+/*Navbar styling starts here*/
+nav{
+	height: 6em;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 2em 0 5em;
+	background-color: #1b1b1b;
+
+}
+
+nav ul{
+	display: flex;
+	list-style: none;
+}
+
+nav ul li{
+	margin: 0 0.3em;
+
+}
+
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.3em;
+	letter-spacing: 0.1em;
+	font-weight: 500;
+	padding: 0.5em 0.5em;
+	border-radius: 0.5em;
+	transition: all 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active{
+	color: #1b1b1b;
+	background-color: #fff;
+
+}
+
+nav .menuBtn i{
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+	display: none;
+}
+
+.logo{
+	font-size: 2em;
+	color: #fff;
+	letter-spacing: 0.1em;
+}
+input#click{
+	display: none;		/*for not displaying the button checkbox*/
+}
+
+/*Navbar styling ends here*/
+
+@media (max-width:940px){
+
+
+
+	.logo{
+		font-size: 1.5em;
+
+	}
+
+	nav .menuBtn i{
+		display: block;
+
+	}
+
+	#click:checked ~ .menuBtn i:before{
+		content: "\f00d";				/*for making the menuIcon as cancel icon*/
+	}
+	nav ul{
+		position: fixed;
+		top: 5em;
+		left: -100%;		/*slides out the menu*/
+		background-color: black;
+		height: 100vh;
+		width: 100%;
+		display: block;
+		text-align: center;
+		transition: all 0.3s ease;
+
+	}
+
+	#click:checked ~ ul{
+		left: 0%;			/*Slides in the menu*/
+	}
+
+	nav ul li{
+		margin: 2.6em 0;
+		display: block;
+	}
+	
+	nav ul li a{
+		font-size: 1.4em;
+	}
+
+	nav ul li a:hover,nav ul li a.active{
+
+		color: cyan;
+		background: none;
+
+	}
+
+
+
+}
