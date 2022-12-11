@@ -8,9 +8,12 @@ body{
 	font-family: montserrat;
 }
 
-
+html{
+	scroll-behavior: smooth;
+}
 /*Navbar styling starts here*/
 nav{
+
 	height: 6em;
 	width: 100%;
 	display: flex;
@@ -18,12 +21,18 @@ nav{
 	justify-content: space-between;
 	padding: 0 2em 0 5em;
 	background-color: #1b1b1b;
+	position: fixed;
+	opacity: 1;
+	z-index: 10000;
+
+
 
 }
 
 nav ul{
 	display: flex;
 	list-style: none;
+	position: relative;
 }
 
 nav ul li{
@@ -38,6 +47,7 @@ nav ul li a{
 	letter-spacing: 0.1em;
 	font-weight: 500;
 	padding: 0.5em 0.5em;
+	position: relative;
 	border-radius: 0.5em;
 	transition: all 0.3s ease;
 }
@@ -64,11 +74,152 @@ input#click{
 	display: none;		/*for not displaying the button checkbox*/
 }
 
+
 /*Navbar styling ends here*/
 
-@media (max-width:940px){
+header{
+	padding-bottom: 3em;
+	opacity: 1;
+}
+
+.mainCont{
+	
+	left: 70%;
+	color: white;
+	font-size: 1.2em;
+
+}
+
+.rdmr{
+	border-radius: 0.5em;
+	background-color: white;
+	color: black;
+	font-size: 1.1em;
+	margin-top: 1em;
+	padding: 0.3em 0.7em; 
+}
+
+.TopContent{
+
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url(images/deskBack.jpg);
+	min-height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
 
 
+}
+
+.mainCont{
+	float: right;
+	margin-top: 15em;
+	margin-right: 3em;
+
+}
+.mainCont h1{
+	font-size: 1.5em;
+}
+.middleSect{
+	background-color: black;
+	padding: 1.2px;
+	height: auto;
+	color: white; 
+	
+}
+
+.middleContent img{
+	height: 18em;
+	width: 30em;
+	border-radius: 50%;
+	overflow: hidden;
+	opacity: 1;
+	
+}
+.middleContent p{
+	
+	font-size: 1.8em;
+	padding: 1.1em 1.6em;
+}
+
+.middleContent{
+	margin: 1.5em auto 1.1em;
+}
+
+.middleContent .fltRight{
+	float: right;
+}
+
+
+.middleContent h2{
+	font-size: 2em;
+	padding-left: 1.6em;
+	padding-top: 1em;
+	
+}
+
+
+
+/*-----------------Footer---------*/
+
+footer{
+	padding: 40px 0;
+	background-color: #1f1f1f;
+}
+
+footer, .social{
+	text-align: center;
+	padding-bottom: 25px;
+	color: #fff;
+}
+
+.social a{
+
+	font-size: 24px;
+	color: inherit;
+	border: 1px solid #ccc;
+	width: 40px;
+	height: 40px;
+	line-height: 38px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	margin: 0 8px;
+	opacity: 0.75;
+}
+.social a:hover{
+	opacity: 0.9;
+}
+
+
+
+
+
+
+@media (max-width:650px){
+
+
+	body{
+		font-family: cursive;
+	}
+	button{
+		font-family: cursive;
+		font-size: 0.5em;
+	}
+	#click{
+		display: block;
+	}
+	.TopContent{
+		
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url(images/mobBack.jpg);
+	}
+	header{
+		padding-bottom: 3em;
+	}
+
+	nav{
+		padding: 0 2em 0 3em;
+	}
 
 	.logo{
 		font-size: 1.5em;
@@ -81,9 +232,11 @@ input#click{
 	}
 
 	#click:checked ~ .menuBtn i:before{
-		content: "\f00d";				/*for making the menuIcon as cancel icon*/
+		content: "\f00d";
+		font-size: 22px;				/*for making the menuIcon as cancel icon*/
 	}
 	nav ul{
+
 		position: fixed;
 		top: 5em;
 		left: -100%;		/*slides out the menu*/
@@ -117,5 +270,35 @@ input#click{
 	}
 
 
+	.mainCont{
+
+		margin-left: 3em;
+
+	}
+
+	.mainCont h1{
+		font-size: 1.5em;
+	}
+	.mainCont h2{
+		font-size: 1.2em;
+	}
+
+	
+
+	.middleSect{
+		margin-top: -7em;
+		font-size: 0.7em;
+
+	}
+
+	.imgS{
+		width: 336px;
+		height: 201.59px;
+		margin-left: 2em;
+
+	}
+	.middleContent{
+		
+	}
 
 }
