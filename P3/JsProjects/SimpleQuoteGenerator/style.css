@@ -103,8 +103,7 @@ body{
 
 	.mainContent{
 		width: 300px;
-		min-height: 250px;
-		max-height: 800px;
+		height: 250px;
 		margin: auto;
 		padding: 25px 25px;
 	}
