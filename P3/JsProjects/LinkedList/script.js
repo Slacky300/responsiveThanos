@@ -45,7 +45,7 @@ class LinkedList{
 	insertAtIndex(data,index){
 
 		if(index<0 || index>this.size){
-			console.log("List out of bound");
+			alert("List out of bound");
 			return;
 		}else if(index===0){
 
@@ -206,8 +206,7 @@ class LlFunctions{
 			u.li.innerText = u.input;
 
 			ll.insertLast(u.input);
-			ll.printData();
-
+			
 
 	}
 
@@ -231,30 +230,58 @@ class LlFunctions{
 			u.li.innerText = u.input;
 
 			ll.insertFirst(u.input);
-			ll.printData();
+			
 			
 	}
 
-	// docInsertRandom(){
+	docInsertRandom(){
 
-	// 	let u = getValues();
+		let u = getValues();
+		// let index = parseInt(document.getElementById('getIndex').value);
+		let size = ll.getNoOfNodes();
+		let index = parseInt(prompt("Enter the index value"));
+		if(index<0 || index>size){
 
-	// 	u.li.setAttribute('class','liList');
-	// 	u.arrowIcon.setAttribute('class','fas fa-arrow-right');
-	// 	u.link.setAttribute('class','liLink');
+			alert("list out of bounds");
+			return;
+		}
+		u.li.setAttribute('class','liList');
+		u.arrowIcon.setAttribute('class','fas fa-arrow-right');
+		u.link.setAttribute('class','liLink');
 
-	// 	ll.insertAtIndex(u.input,1);
+		ll.insertAtIndex(u.input,index);
 
-	// 	u.li.innerText = u.input;
-	// 	let after = u.ul.children[2];
+		let calc;
+		let nextNode;
+		u.li.innerText = u.input;
+		if(index==0){
+			calc = 0
+			nextNode = u.ul.children[calc];
+			u.link.append(u.arrowIcon);
+			u.ul.insertBefore(u.li,nextNode);
+			nextNode = u.ul.children[++calc];
+			u.ul.insertBefore(u.link,nextNode)
+		}else{
+			calc = index+(index-1);
+			nextNode = u.ul.children[calc];
+		
+			u.link.append(u.arrowIcon);
+			u.ul.insertBefore(u.link,nextNode)
+			u.ul.insertBefore(u.li,nextNode);
+		}
+		
+		
 
-	// 	before.insertBefore(after,before);
+		ll.printData();
+		
+
+		
+		
 
 
 
 
-
-	// }
+	}
 
 	docRemoveElement(){
 
@@ -293,6 +320,7 @@ class LlFunctions{
 
 }
 
+
 const docLL = new LlFunctions();
 let btn2 = document.querySelector('.btn2');
 btn2.addEventListener('click',() => {
@@ -306,8 +334,12 @@ btn2.addEventListener('click',() => {
 	}else if(valu==2){
 		docLL.docInsertLast();
 	}else if(valu==3){
+
 		docLL.docRemoveElement();
 
+	}else if(valu==4){
+
+		docLL.docInsertRandom();
 	}
 });
 
